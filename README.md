@@ -1,8 +1,9 @@
-# 🔊 Chatify — YouTube Video Chaptering and Summarization Tool
+# 🔊 Chatify – YouTube Video Chaptering & Summarization Tool
 
 **Chatify** is an AI-powered Flask web application that takes a YouTube video URL and automatically generates meaningful **chapter-wise summaries** and **titles** from spoken Hindi or Hinglish content. It uses **OpenAI's Whisper**, **mBART**, and **KeyBERT** to convert speech to text, summarize it, and generate chapter titles. The output is a clean, timestamped JSON file—ideal for content indexing, accessibility, or quick navigation.
 
 ---
+
 ## 🧰 Tech Stack
 
 ### 🖥️ Backend
@@ -27,6 +28,7 @@
 ### 📝 Output
 - **JSON** — Chapters with timestamps, titles, and summaries.
 
+---
 
 ## 🚀 Features
 
@@ -34,10 +36,32 @@
 - 🧠 Converts spoken Hindi/Hinglish content into English summaries  
 - 🕐 Breaks videos into timestamped chapters (default: every 5 minutes)  
 - 📝 Generates meaningful chapter titles using keyword extraction  
-- 📁 Outputs a structured `.json` file containing start time, title, and summary  
+- 📁 Generates a structured `.json` file containing start time, title, and summary  
 - 🌐 Simple Flask UI to interact with the tool via browser  
 
 ---
+
+## 📂 Project Structure
+
+chatify/
+├── app.py # Flask application entry point
+├── workspace/ # Temporary folder to store job-specific files
+├── templates/
+│ └── index.html # Main web interface
+├── static/
+│ └── style.css # Web design
+├── trail/ # Demo files (sample output)
+│ ├── try.ipynb
+│ └── chapters.ipynb
+├── pipeline/
+│ ├── downloader.py # Uses yt-dlp to extract audio from YouTube
+│ ├── transcriber.py # Whisper transcription + transcript saver
+│ ├── chapterizer.py # Chunking + summarization + title generation
+│ └── utils.py # Time conversion utilities
+
+
+---
+
 ## 🔧 Pipeline Explanation
 
 ### 1. 🎥 Input: YouTube Video Link
@@ -73,7 +97,10 @@
   - `title`
 - Final output is stored as a structured `.json` file.
 
-### ✅ Example Output
+---
+
+## ✅ Example Output
+
 ```json
 [
   {
@@ -81,27 +108,9 @@
     "title": "Social Professions",
     "summary": "The speaker discusses how certain professions like tea vendors, garbage collectors, and dancers are perceived with bias in Indian society..."
   },
-  ...
+  {
+    "start_time": "0:05:00",
+    "title": "Education Challenges",
+    "summary": "The video highlights problems in the Indian education system including outdated curriculum, exam pressure, and limited access in rural areas..."
+  }
 ]
-
----
-## 📂 Project Structure
-
-chatify/
-│
-├── app.py # Flask app
-├── workspace/ # Temporary folder to store job-specific files
-├── templates/
-│ └── index.html # Web interface
-│
-└── pipeline/
-├── downloader.py # Uses yt-dlp to extract audio from YouTube
-├── transcriber.py # Whisper transcription + transcript saver
-├── chapterizer.py # Chunking + summarization + title generation
-└── utils.py # time conversion
-├── static/
-│ └── style.css # Web design
-├── trail/     # demo files(project working)
-│ └── try.ipynb 
-  └── chapters.ipynb
-
