@@ -22,8 +22,7 @@
 - **pathlib / os / json** — For safe file and directory operations.
 
 ### 🌐 Frontend
-- **HTML + Jinja2** — For rendering dynamic content using Flask templates.
-- **Bootstrap (optional)** — For basic responsive styling (if used in your `index.html`).
+- **HTML** — For rendering dynamic content using Flask templates.
 
 ### 📝 Output
 - **JSON** — Chapters with timestamps, titles, and summaries.
@@ -85,6 +84,7 @@
   ...
 ]
 
+---
 ## 📂 Project Structure
 
 chatify/
