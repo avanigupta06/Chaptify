@@ -60,6 +60,7 @@ chatify/
 │   ├── chapterizer.py      # Chunking + summarization + title generation
 │   └── utils.py            # Time conversion utilities
 
+```
 ---
 
 ## 🔧 Pipeline Explanation
