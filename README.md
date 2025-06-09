@@ -43,22 +43,22 @@
 
 ## 📂 Project Structure
 
+```text
 chatify/
-├── app.py # Flask application entry point
-├── workspace/ # Temporary folder to store job-specific files
+├── app.py                  # Flask application entry point
+├── workspace/              # Temporary folder to store job-specific files
 ├── templates/
-│ └── index.html # Main web interface
+│   └── index.html          # Main web interface
 ├── static/
-│ └── style.css # Web design
-├── trail/ # Demo files (sample output)
-│ ├── try.ipynb
-│ └── chapters.ipynb
+│   └── style.css           # Web design
+├── trail/                  # Demo files (sample output)
+│   ├── try.ipynb
+│   └── chapters.ipynb
 ├── pipeline/
-│ ├── downloader.py # Uses yt-dlp to extract audio from YouTube
-│ ├── transcriber.py # Whisper transcription + transcript saver
-│ ├── chapterizer.py # Chunking + summarization + title generation
-│ └── utils.py # Time conversion utilities
-
+│   ├── downloader.py       # Uses yt-dlp to extract audio from YouTube
+│   ├── transcriber.py      # Whisper transcription + transcript saver
+│   ├── chapterizer.py      # Chunking + summarization + title generation
+│   └── utils.py            # Time conversion utilities
 
 ---
 
