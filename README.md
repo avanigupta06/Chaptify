@@ -3,7 +3,14 @@
 **Chatify** is an AI-powered Flask web application that takes a YouTube video URL and automatically generates meaningful **chapter-wise summaries** and **titles** from spoken Hindi or Hinglish content. It uses **OpenAI's Whisper**, **mBART**, and **KeyBERT** to convert speech to text, summarize it, and generate chapter titles. The output is a clean, timestamped JSON file—ideal for content indexing, accessibility, or quick navigation.
 
 ---
+## 📖 Research Background
+This project is the **practical Flask implementation** of our **published research paper**:  
+👉 [Automatic Chapter Generation for Hindi-English YouTube Videos (JISEM 2024)](https://jisem-journal.com/index.php/journal/article/view/12505)
 
+📂 The full research repository (dataset pipeline, methodology, experiments):  
+👉 [Automatic-Chapter-Generation-for-Hindi-English-YouTube-Videos](https://github.com/avanigupta06/Automatic-Chapter-Generation-for-Hindi-English-YouTube-Videos)
+
+---
 ## 🧰 Tech Stack
 
 ### 🖥️ Backend
@@ -115,3 +122,45 @@ chatify/
     "summary": "The video highlights problems in the Indian education system including outdated curriculum, exam pressure, and limited access in rural areas..."
   }
 ]
+---
+
+## 🖼️ Screenshots
+
+---
+
+## ⚙️ Installation & Usage
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/avanigupta06/Chaptify.git
+cd Chaptify
+```
+
+### 2️⃣ Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate   # For Linux/Mac
+venv\Scripts\activate      # For Windows
+```
+### 3️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the Flask App
+```bash
+python app.py
+```
+### 5️⃣ Access in Browser
+
+Visit:
+👉 http://127.0.0.1:5000/
+
+Paste any YouTube URL and get automatic chapters & summaries 🎉
+
+---
+
+## Points To Note
+- Download ffmpeg locally 
+- GPU is recommended for running this code
+---
