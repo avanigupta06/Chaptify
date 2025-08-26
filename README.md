@@ -124,9 +124,6 @@ chatify/
 ]
 ---
 
-## 🖼️ Screenshots
-
----
 
 ## ⚙️ Installation & Usage
 
